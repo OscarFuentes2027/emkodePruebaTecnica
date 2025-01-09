@@ -1,0 +1,49 @@
+.sidebar {
+    width: 60px; 
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 58, 64, 0.8); /* Color semi-transparente */
+    backdrop-filter: blur(8px); /* Desenfoque del fondo */
+    transition: width 0.3s ease, backdrop-filter 0.3s ease;
+    overflow-x: hidden; 
+    z-index: 1000; /* Asegura que esté encima del contenido */
+}
+
+.sidebar:hover {
+    width: 400px; 
+    backdrop-filter: blur(12px); /* Aumenta el desenfoque al expandirse */
+}
+
+.sidebar .nav-link {
+    color: #ffffff;
+    white-space: nowrap; 
+}
+
+.sidebar .nav-link i {
+    margin-right: 30px;
+}
+
+.sidebar:hover .nav-link span {
+    display: inline;
+}
+
+.sidebar .nav-link span {
+    display: none;
+}
+
+.sidebar h1 {
+    color: #ffffff;
+    font-size: 48px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin: 10px 0;
+    display: none; 
+}
+
+.sidebar:hover h1 {
+    display: block; 
+}
